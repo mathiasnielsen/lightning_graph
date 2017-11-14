@@ -1,4 +1,15 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:local="clr-namespace:LightningGraph" x:Class="LightningGraph.LightningGraphPage">
-	<Label Text="Welcome to Xamarin Forms!" VerticalOptions="Center" HorizontalOptions="Center" />
+<?xml version="1.0" encoding="utf-8"?>
+<ContentPage 
+    xmlns="http://xamarin.com/schemas/2014/forms" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+    xmlns:charts="clr-namespace:LightningGraph.Views;assembly=LightningGraph"
+    xmlns:local="clr-namespace:LightningGraph" 
+    x:Class="LightningGraph.LightningGraphPage">
+    <StackLayout
+        Margin="40"
+        Orientation="Vertical">
+        <Label Text="Welcome to Xamarin Forms!" VerticalOptions="Center" HorizontalOptions="Center" />
+        <charts:ChartView x:Name="chart1" HeightRequest="140" BackgroundColor="White" />
+        <charts:ChartView x:Name="chart2" HeightRequest="140" BackgroundColor="White" />
+    </StackLayout>
 </ContentPage>
