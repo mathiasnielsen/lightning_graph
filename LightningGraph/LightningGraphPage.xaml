@@ -5,11 +5,26 @@
     xmlns:charts="clr-namespace:LightningGraph.Views;assembly=LightningGraph"
     xmlns:local="clr-namespace:LightningGraph" 
     x:Class="LightningGraph.LightningGraphPage">
-    <StackLayout
-        Margin="40"
-        Orientation="Vertical">
-        <Label Text="Welcome to Xamarin Forms!" VerticalOptions="Center" HorizontalOptions="Center" />
-        <charts:ChartView x:Name="chart1" HeightRequest="140" BackgroundColor="White" />
-        <charts:ChartView x:Name="chart2" HeightRequest="140" BackgroundColor="White" />
-    </StackLayout>
+    <!-- MasterView -->
+    <Grid>
+
+        <StackLayout
+            Padding="20, 40"
+            Orientation="Vertical"
+            Spacing="10" 
+            BackgroundColor="#EEEEEE">
+            <Label 
+                Text="Welcome to cool Data Vizualization!" 
+                VerticalOptions="Center" 
+                HorizontalOptions="Center" />
+            <charts:ChartView x:Name="chart1" HeightRequest="140" BackgroundColor="White" />
+            <charts:ChartView x:Name="chart2" HeightRequest="140" BackgroundColor="White" />
+        </StackLayout>
+            
+        <Grid
+          x:Name="FlashView"
+          IsVisible="false"
+          BackgroundColor="White"/>
+        
+    </Grid>
 </ContentPage>
